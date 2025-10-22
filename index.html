@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ViSE: A Systematic Approach to Vision-Only Street-View Extrapolation">
+  <meta name="keywords" content="Gaussians, Dynamic, Rendering, Splatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViSE: A Systematic Approach to Vision-Only Street-View Extrapolation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/hust.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title">RAD: Training an End-to-End Driving Policy via Large-Scale</h1>
+          <h1 class="title is-1 publication-title"> 3DGS-based Reinforcement Learning</h1> -->
+          <h1 class="title is-1 publication-title" style="white-space: nowrap;">
+            ViSE: A Systematic Approach to Vision-Only 
+            <br>
+            Street-View Extrapolation
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Kaiyuan Tan</a>,
+            </span>
+            <span class="author-block">
+              <a>Yingying Shen</a>,
+            </span>
+            <span class="author-block">
+              <a>Haiyang Sun</a><sup>†</sup>,
+            </span>
+            <span class="author-block">
+              <a>Bing Wang</a>,
+            </span>
+            <span class="author-block">
+              <a>Guang Chen</a>,
+            </span>
+            <span class="author-block">
+              <a>Hangjun Ye</a><sup>✉</sup>,
+            </span>
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Xiaomi EV</span>
+            <p></p>
+            
+            <span class="author-block"><sup>†</sup>Project Leader.</span>
+            <span class="author-block"><sup>✉</sup>Corresponding Author.</span>
+
+          <!-- </div> -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/wm-research/ViSE"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Realistic view extrapolation is critical for closed-loop simulation in autonomous driving, yet it remains a significant challenge for current Novel View Synthesis (NVS) methods, which often produce distorted and inconsistent images beyond the original trajectory. This report presents our winning solution, which took first place in the RealADSim Workshop NVS track at ICCV 2025. To address the core challenges of street view extrapolation, we introduce a comprehensive four-stage pipeline. First, we employ a data-driven initialization strategy to generate a robust pseudo-LiDAR point cloud, avoiding local minima. Second, we inject strong geometric priors by modeling the road surface with a novel dimension-reduced SDF termed 2D-SDF. Third, we leverage a generative prior to create pseudo ground truth for extrapolated viewpoints, providing auxiliary supervision. Finally, a data-driven adaptation network removes time-specific artifacts. On the RealADSim-NVS benchmark, our method achieves a final score of 0.441, ranking first among all participants.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Pipeline</h2>
+    <div class="content has-text-justified">
+    
+    </div>
+    <img src="./static/images/pipeline_realadsim.png">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Results on the RealADSim-NVS Benchmark.</h2>
+    <div class="content has-text-justified">
+    <a href="(https://realadsim.github.io/2025/#award)">https://realadsim.github.io/2025/#award</a>
+    </div>
+    <img src="./static/images/winner.png">
+  </div>
+</section>
+
+ <!-- style="text-align: center;" -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Demo Videos on the RealADSim-NVS Benchmark.</h2>
+    
+    <!-- 修改：垂直布局，间距40px，内容居中 -->
+    <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 20px; align-items: center;">
+    
+      <!-- 第一个视频块 -->
+      <div style="text-align: center; width: 100%;">
+        <video controls width="100%">
+          <source src="./static/videos/realadsim-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .container.fixed-width {
+    max-width: 1000px; 
+    margin: 0 auto;
+  }
+  .title-container {
+    padding-left: 0px;  
+  }
+  .columns {
+    margin-top: 20px; 
+  }
+</style>
+
+<head>
+  <style>
+    .video-container-wrapper {
+      background-color: #f0f0f0; 
+      padding: 20px; 
+      border-radius: 5px; 
+    }
+
+    .video-container-wrapper video {
+      width: 100%; 
+      border-radius: 8px; 
+    }
+
+    .columns {
+      margin-bottom: 20px; 
+    }
+
+    .background-container {
+      background-color: #f0f0f0; 
+      padding: 30px; 
+      border-radius: 15px; 
+    }
+  </style>
+</head>
+
+
+
+<div style="margin-top: 30px;"></div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>@article{ViSE2025,
+      title={ViSE: A Systematic Approach to Vision-Only Street-View Extrapolation},
+      author={Kaiyuan Tan, Yingying Shenm Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye},
+      journal={arXiv},
+      year={2025}
+    }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="https://arxiv.org/abs/2310.08528">
+        <i class="fas fa-file-pdf"></i>
+      </a>  -->
+      <a class="icon-link" href="https://github.com/hustvl" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The source code is borrowed from <a
+              href=""></a>,
+              we thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
