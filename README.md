@@ -10,7 +10,7 @@ Kaiyuan Tan, Yingying Shen, Haiyang Sun†, Bing Wang, Guang Chen, Hangjun Ye✉
 (†) Project leader. (✉)Corresponding Author.
 
 <a href=""><img src='https://img.shields.io/badge/arXiv-ViSE-red' alt='Paper PDF'></a>
-<a href=""><img src='https://img.shields.io/badge/Project_Page-ViSE-green' alt='Project Page'></a>
+<a href="https://wm-research.github.io/ViSE/"><img src='https://img.shields.io/badge/Project_Page-ViSE-green' alt='Project Page'></a>
 </div>
 
 
@@ -35,7 +35,7 @@ Realistic view extrapolation is critical for closed-loop simulation in autonomou
 
 
 ## Citation
-If you find Genesis is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
+If you find ViSE is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
 
 ```bibtex
 @article{ViSE2025,
