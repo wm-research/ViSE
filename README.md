@@ -9,7 +9,7 @@ Kaiyuan Tan, Yingying Shen, Haiyang Sun†, Bing Wang, Guang Chen, Hangjun Ye✉
 
 (†) Project leader. (✉)Corresponding Author.
 
-<a href=""><img src='https://img.shields.io/badge/arXiv-ViSE-red' alt='Paper PDF'></a>
+<a href="https://www.arxiv.org/abs/2510.18341"><img src='https://img.shields.io/badge/arXiv-ViSE-red' alt='Paper PDF'></a>
 <a href="https://wm-research.github.io/ViSE/"><img src='https://img.shields.io/badge/Project_Page-ViSE-green' alt='Project Page'></a>
 </div>
 
